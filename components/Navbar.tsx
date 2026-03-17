@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import { logout } from "@/lib/auth";
 
 export default function Navbar() {
+  const { data: session } = useSession();
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
