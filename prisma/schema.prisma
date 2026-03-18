@@ -68,6 +68,7 @@ model Job {
   title       String
   company     String
   location    String
+  type        String
   description String  @db.Text
   salary      String?
 
